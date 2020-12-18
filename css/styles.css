@@ -11,12 +11,11 @@ header {
   width: 100%;
   background-color: #efefef;
   padding: 10px 50px;
-  box-shadow: 0.36px 4px 5px #00000033;
+  box-shadow: 0.36px 4px 5px rgba(0, 0, 0, 0.08);
   z-index: 101;
 }
 .navbar {
   padding: 0;
-  align-items: center;
 }
 .icons-img {
   height: 35px;
@@ -182,7 +181,7 @@ header {
 .chart-default {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .chart-text {
   top: 20px;
@@ -222,7 +221,7 @@ header {
 }
 .chart-case-cover::before {
   content: '';
-  clip: rect(0px 160px 160px 0px);
+  clip: rect(0px, 160px, 160px, 0px);
   transform: rotate(0deg);
   background: #14a388;
   position: absolute;
@@ -234,7 +233,7 @@ header {
 }
 .chart-case::before {
   content: '';
-  clip: rect(0px 150px 300px 0px);
+  clip: rect(0px, 150px, 300px, 0px);
   transform: rotate(180deg);
   background: #425b77;
   position: absolute;
@@ -245,7 +244,7 @@ header {
 }
 .chart-case::after {
   content: '';
-  clip: rect(0px 150px 150px 0);
+  clip: rect(0px, 150px, 150px, 0);
   transform: rotate(360deg);
   background: #14a388;
   position: absolute;
@@ -268,14 +267,16 @@ header {
 .chart-text-wrapper {
   text-align: center;
 }
+.chart-wrapper {
+  margin-bottom: 10px;
+}
 .chart-data p {
   margin: 0;
   font-size: 10px;
   font-weight: 400;
-  margin-top: 10px;
 }
 /* RESPONSIVE */
-@media(max-width: 1500px) {
+@media screen and (max-width: 1500px) {
   .main-body {
     padding: 100px 125px;
   }
@@ -283,7 +284,7 @@ header {
     font-size: 18px;
   }
 }
-@media(max-width: 1366px) {
+@media screen and (max-width: 1366px) {
   .invest-details h2 {
     font-size: 40px;
   }
@@ -303,7 +304,7 @@ header {
     font-size: 13px;
   }
 }
-@media(max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .main-body {
     padding: 100px;
   }
@@ -318,7 +319,7 @@ header {
   }
 
 }
-@media(max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .main-body {
     padding: 80px;
   }
@@ -338,7 +339,7 @@ header {
     font-size: 23px;
   }
 }
-@media(max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .main-body {
     padding: 25px;
   }
@@ -358,7 +359,7 @@ header {
     font-size: 20px;
   }
 }
-@media(max-width: 900px) {
+@media screen and (max-width: 900px) {
   .main-body {
     padding: 35px;
   }
@@ -381,7 +382,7 @@ header {
     margin-bottom: 20px;
   }
 }
-@media(max-width: 767px) {
+@media screen and (max-width: 767px) {
   .main-body {
     margin-top: 75px;
   }
@@ -433,12 +434,12 @@ header {
     height: 20px;
   }
 }
-@media(max-width: 360px) {
+@media screen and (max-width: 360px) {
   .chart-opac {
     left: 52%;
   }
 }
-@media(max-width: 320px) {
+@media screen and (max-width: 320px) {
   .chart {
     width: 250px;
     height: 250px;
@@ -448,16 +449,16 @@ header {
     height: 210px;
   }
   .chart-case::before {
-    clip: rect(0px 125px 300px 0);
+    clip: rect(0px, 125px, 300px, 0);
   }
   .chart-case::after {
-    clip: rect(0px 125px 125px 0);
+    clip: rect(0px, 125px, 125px, 0);
   }
   .chart-opac {
     width: 270px;
     height: 270px;
   }
   .chart-case-cover::before {
-    clip: rect(0px 136px 136px 0px);
+    clip: rect(0px, 136px, 136px, 0px);
   }
 }
